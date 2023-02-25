@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import {Text, View} from 'react-native';
+import {Alert, Button, Text, View} from 'react-native';
 
 const App = () => {
   const [sample, setSample] = useState<string>('bobo')
+
+  const clickhandler = () => {
+    console.log('success')
+  }
   
   return (
     <View
@@ -12,6 +16,7 @@ const App = () => {
         alignItems: 'center',
       }}>
       <Text>Try editing me! 🎉 {sample}</Text>
+      <Button title='Press Me' onPress={() => clickhandler()}></Button>
     </View>
   );
 };
